@@ -12,7 +12,7 @@ jobs:
 
       - name: Send repository_dispatch
         env:
-          PAT: secrets.ACTIONS_PAT
+          PAT: ${{ secrets.ACTIONS_PAT }}
         run: |
           curl -i -u molkree:$PAT https://api.github.com/users/molkree
           curl \
