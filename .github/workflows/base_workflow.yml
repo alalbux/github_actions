@@ -10,8 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run a one-line script
+      - name: Send repository_dispatch
+        env:
+          PAT: secrets.ACTIONS_PAT
         run: |
+          curl -i -u molkree:$PAT https://api.github.com/users/molkree
           curl \
             -X POST \
             -H "Accept: application/vnd.github.v3+json" \
