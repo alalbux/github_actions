@@ -1,4 +1,4 @@
-name: Consumer workflow
+name: Should NOT run workflow
 
 on:
   repository_dispatch:
