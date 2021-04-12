@@ -1,0 +1,13 @@
+name: Consumer workflow
+
+on:
+  repository_dispatch:
+    types: [some_other_type]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print success
+        run: echo Hello, world!
